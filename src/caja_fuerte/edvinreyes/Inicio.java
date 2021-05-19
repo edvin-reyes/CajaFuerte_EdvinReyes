@@ -5,8 +5,14 @@
  */
 package caja_fuerte.edvinreyes;
 
+import java.awt.Color;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.plaf.basic.BasicButtonUI;
 
 /**
  *
@@ -14,18 +20,47 @@ import javax.swing.JOptionPane;
  */
 public class Inicio extends javax.swing.JFrame {
 
-    public static ArrayList pin = new ArrayList();
-    public static ArrayList pin1 = new ArrayList();
-    public static ArrayList pin2 = new ArrayList();
-
+    static int a=1;
+    String [] listacontra ={"1234","5678","2019"};
     public Inicio() {
         initComponents();
+        
+        JButton [] botones ={jButton1, jButton3,jButton4, jButton5,jButton6, jButton7,
+            jButton8, jButton9, jButton10, jButton12, jButton11, jButton13};
+        
+        for (JButton boton: botones){
+            boton.setUI(new BasicButtonUI());
+            boton.setBackground(new Color (32, 32, 32));
+            boton.setForeground(Color.white);
+            boton.addMouseListener(new MouseListener() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    
+                }
+
+                @Override
+                public void mousePressed(MouseEvent e) {
+                }
+
+                @Override
+                public void mouseReleased(MouseEvent e) {
+                }
+
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    boton.setBackground(new Color (40, 40, 40));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    boton.setBackground(new Color (32, 32, 32));
+                }
+            });
+        }
+        
         this.setLocationRelativeTo(null);
 
-        pin.add("1234");
-        pin1.add("5678");
-        pin2.add("2019");
-    }
+            }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,27 +71,89 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        contraseña = new javax.swing.JPasswordField();
-        bonton1 = new javax.swing.JButton();
-        bonton2 = new javax.swing.JButton();
-        bonton3 = new javax.swing.JButton();
-        bonton4 = new javax.swing.JButton();
-        bonton5 = new javax.swing.JButton();
-        bonton6 = new javax.swing.JButton();
-        bonton7 = new javax.swing.JButton();
-        bonton8 = new javax.swing.JButton();
-        bonton9 = new javax.swing.JButton();
-        bonton10 = new javax.swing.JButton();
-        bonton11 = new javax.swing.JButton();
-        bonton12 = new javax.swing.JButton();
+        rootPnl = new javax.swing.JPanel();
+        upPnl = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        bienLbl = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        siguiente = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        pren = new javax.swing.JToggleButton();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        contraseña = new javax.swing.JPasswordField();
+        jPanel4 = new javax.swing.JPanel();
+        downPnl = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jPanel7 = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jPanel8 = new javax.swing.JPanel();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jPanel9 = new javax.swing.JPanel();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
-        setUndecorated(true);
+
+        rootPnl.setBackground(new java.awt.Color(60, 60, 60));
+        rootPnl.setLayout(new java.awt.BorderLayout(0, 10));
+
+        upPnl.setBackground(new java.awt.Color(60, 60, 60));
+        upPnl.setPreferredSize(new java.awt.Dimension(0, 150));
+        upPnl.setLayout(new java.awt.GridLayout(4, 0, 0, 5));
+
+        jPanel1.setBackground(new java.awt.Color(60, 60, 60));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 498, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 33, Short.MAX_VALUE)
+        );
+
+        upPnl.add(jPanel1);
+
+        bienLbl.setBackground(new java.awt.Color(60, 60, 60));
+        bienLbl.setFont(new java.awt.Font("Orbitron", 0, 24)); // NOI18N
+        bienLbl.setForeground(new java.awt.Color(255, 255, 255));
+        bienLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bienLbl.setText("BIENVENIDO");
+        upPnl.add(bienLbl);
+
+        jLabel1.setBackground(new java.awt.Color(60, 60, 60));
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Ingrese su PIN de acceso");
+        upPnl.add(jLabel1);
+
+        jPanel2.setLayout(new java.awt.BorderLayout());
+
+        jPanel3.setBackground(new java.awt.Color(60, 60, 60));
+        jPanel3.setPreferredSize(new java.awt.Dimension(80, 33));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 33, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(jPanel3, java.awt.BorderLayout.LINE_END);
 
         contraseña.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         contraseña.addActionListener(new java.awt.event.ActionListener() {
@@ -64,322 +161,271 @@ public class Inicio extends javax.swing.JFrame {
                 contraseñaActionPerformed(evt);
             }
         });
+        jPanel2.add(contraseña, java.awt.BorderLayout.CENTER);
 
-        bonton1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        bonton1.setText("1");
-        bonton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bonton1ActionPerformed(evt);
-            }
-        });
+        jPanel4.setBackground(new java.awt.Color(60, 60, 60));
+        jPanel4.setPreferredSize(new java.awt.Dimension(80, 33));
 
-        bonton2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        bonton2.setText("2");
-        bonton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bonton2ActionPerformed(evt);
-            }
-        });
-
-        bonton3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        bonton3.setText("3");
-        bonton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bonton3ActionPerformed(evt);
-            }
-        });
-
-        bonton4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        bonton4.setText("4");
-        bonton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bonton4ActionPerformed(evt);
-            }
-        });
-
-        bonton5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        bonton5.setText("5");
-        bonton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bonton5ActionPerformed(evt);
-            }
-        });
-
-        bonton6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        bonton6.setText("6");
-        bonton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bonton6ActionPerformed(evt);
-            }
-        });
-
-        bonton7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        bonton7.setText("7");
-        bonton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bonton7ActionPerformed(evt);
-            }
-        });
-
-        bonton8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        bonton8.setText("8");
-        bonton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bonton8ActionPerformed(evt);
-            }
-        });
-
-        bonton9.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        bonton9.setText("9");
-        bonton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bonton9ActionPerformed(evt);
-            }
-        });
-
-        bonton10.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        bonton10.setText("*");
-        bonton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bonton10ActionPerformed(evt);
-            }
-        });
-
-        bonton11.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        bonton11.setText("0");
-        bonton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bonton11ActionPerformed(evt);
-            }
-        });
-
-        bonton12.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        bonton12.setText("#");
-        bonton12.setToolTipText("");
-        bonton12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bonton12ActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel1.setText("Ingrese su PIN de acceso");
-
-        siguiente.setText("Siguiente");
-        siguiente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                siguienteActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Salir");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        pren.setText("A");
-        pren.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                prenActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pren)
-                .addGap(58, 58, 58)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(104, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(bonton10)
-                        .addGap(18, 18, 18)
-                        .addComponent(bonton11)
-                        .addGap(18, 18, 18)
-                        .addComponent(bonton12))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(bonton4)
-                            .addGap(18, 18, 18)
-                            .addComponent(bonton5)
-                            .addGap(18, 18, 18)
-                            .addComponent(bonton6))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(bonton1)
-                            .addGap(18, 18, 18)
-                            .addComponent(bonton2)
-                            .addGap(18, 18, 18)
-                            .addComponent(bonton3))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(bonton7)
-                            .addGap(18, 18, 18)
-                            .addComponent(bonton8)
-                            .addGap(18, 18, 18)
-                            .addComponent(bonton9))))
-                .addGap(101, 101, 101))
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pren))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bonton1)
-                    .addComponent(bonton2)
-                    .addComponent(bonton3))
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bonton4)
-                    .addComponent(bonton5)
-                    .addComponent(bonton6))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bonton7)
-                    .addComponent(bonton8)
-                    .addComponent(bonton9))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bonton10)
-                    .addComponent(bonton11)
-                    .addComponent(bonton12))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(siguiente)
-                    .addComponent(jButton2))
-                .addContainerGap())
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 33, Short.MAX_VALUE)
         );
+
+        jPanel2.add(jPanel4, java.awt.BorderLayout.LINE_START);
+
+        upPnl.add(jPanel2);
+
+        rootPnl.add(upPnl, java.awt.BorderLayout.PAGE_START);
+
+        downPnl.setBackground(new java.awt.Color(60, 60, 60));
+        downPnl.setLayout(new java.awt.GridLayout(4, 0, 10, 10));
+
+        jPanel6.setBackground(new java.awt.Color(60, 60, 60));
+        jPanel6.setLayout(new java.awt.GridLayout(1, 3, 10, 0));
+
+        jButton1.setFont(new java.awt.Font("Orbitron", 0, 24)); // NOI18N
+        jButton1.setText("1");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jPanel6.add(jButton1);
+
+        jButton3.setFont(new java.awt.Font("Orbitron", 0, 24)); // NOI18N
+        jButton3.setText("2");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+        jPanel6.add(jButton3);
+
+        jButton4.setFont(new java.awt.Font("Orbitron", 0, 24)); // NOI18N
+        jButton4.setText("3");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+        jPanel6.add(jButton4);
+
+        downPnl.add(jPanel6);
+
+        jPanel7.setBackground(new java.awt.Color(60, 60, 60));
+        jPanel7.setLayout(new java.awt.GridLayout(1, 3, 10, 0));
+
+        jButton5.setFont(new java.awt.Font("Orbitron", 0, 24)); // NOI18N
+        jButton5.setText("4");
+        jButton5.setPreferredSize(new java.awt.Dimension(150, 80));
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jButton5);
+
+        jButton6.setFont(new java.awt.Font("Orbitron", 0, 24)); // NOI18N
+        jButton6.setText("5");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+        jPanel7.add(jButton6);
+
+        jButton7.setFont(new java.awt.Font("Orbitron", 0, 24)); // NOI18N
+        jButton7.setText("6");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
+        jPanel7.add(jButton7);
+
+        downPnl.add(jPanel7);
+
+        jPanel8.setBackground(new java.awt.Color(60, 60, 60));
+        jPanel8.setLayout(new java.awt.GridLayout(1, 3, 10, 0));
+
+        jButton8.setFont(new java.awt.Font("Orbitron", 0, 24)); // NOI18N
+        jButton8.setText("7");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
+        jPanel8.add(jButton8);
+
+        jButton9.setFont(new java.awt.Font("Orbitron", 0, 24)); // NOI18N
+        jButton9.setText("8");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton9MouseClicked(evt);
+            }
+        });
+        jPanel8.add(jButton9);
+
+        jButton10.setFont(new java.awt.Font("Orbitron", 0, 24)); // NOI18N
+        jButton10.setText("9");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton10MouseClicked(evt);
+            }
+        });
+        jPanel8.add(jButton10);
+
+        downPnl.add(jPanel8);
+
+        jPanel9.setBackground(new java.awt.Color(60, 60, 60));
+        jPanel9.setLayout(new java.awt.GridLayout(1, 3, 10, 0));
+
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancelar.png"))); // NOI18N
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton11MouseClicked(evt);
+            }
+        });
+        jPanel9.add(jButton11);
+
+        jButton12.setFont(new java.awt.Font("Orbitron", 0, 24)); // NOI18N
+        jButton12.setText("0");
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton12MouseClicked(evt);
+            }
+        });
+        jPanel9.add(jButton12);
+
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/check.png"))); // NOI18N
+        jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton13MouseClicked(evt);
+            }
+        });
+        jPanel9.add(jButton13);
+
+        downPnl.add(jPanel9);
+
+        rootPnl.add(downPnl, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(rootPnl, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
-
-        int a = 0;
-        if (pren.isSelected()) {
-            caja1 co = new caja1();
-            co.setVisible(true);
-            this.setVisible(false);
-        } else {
-            if (contraseña.getText().equals("")) {
-                JOptionPane.showMessageDialog(null, "No ingreso datos", "Datos erroneos", JOptionPane.QUESTION_MESSAGE);
-                a = 2;
-            } else {
-                for (int i = 0; i < pin.size(); i++) {
-                    if (contraseña.getText().equals(pin.get(i))) {
-                        caja1 co = new caja1();
-                        co.setVisible(true);
-                        this.setVisible(false);
-                        a = 1;
-                    }
-                }
-                for (int i = 0; i < pin1.size(); i++) {
-                    if (contraseña.getText().equals(pin1.get(i))) {
-                        caja2 co = new caja2();
-                        co.setVisible(true);
-                        this.setVisible(false);
-                        a = 1;
-                    }
-                }
-                for (int i = 0; i < pin2.size(); i++) {
-                    if (contraseña.getText().equals(pin2.get(i))) {
-                        caja3 co = new caja3();
-                        co.setVisible(true);
-                        this.setVisible(false);
-                        a = 1;
-                    }
-                }
-            }
-            
-            if (a == 0) {
-                JOptionPane.showMessageDialog(null, "Datos incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
-                contraseña.setText("");
-            }
-        }
-
-
-    }//GEN-LAST:event_siguienteActionPerformed
-
-    private void bonton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bonton1ActionPerformed
-        contraseña.setText(contraseña.getText() + "1");
-    }//GEN-LAST:event_bonton1ActionPerformed
-
-    private void bonton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bonton2ActionPerformed
-        contraseña.setText(contraseña.getText() + "2");
-    }//GEN-LAST:event_bonton2ActionPerformed
-
-    private void bonton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bonton3ActionPerformed
-        contraseña.setText(contraseña.getText() + "3");
-    }//GEN-LAST:event_bonton3ActionPerformed
-
-    private void bonton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bonton4ActionPerformed
-        contraseña.setText(contraseña.getText() + "4");
-    }//GEN-LAST:event_bonton4ActionPerformed
-
-    private void bonton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bonton5ActionPerformed
-        contraseña.setText(contraseña.getText() + "5");
-    }//GEN-LAST:event_bonton5ActionPerformed
-
-    private void bonton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bonton6ActionPerformed
-        contraseña.setText(contraseña.getText() + "6");
-    }//GEN-LAST:event_bonton6ActionPerformed
-
-    private void bonton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bonton7ActionPerformed
-        contraseña.setText(contraseña.getText() + "7");
-    }//GEN-LAST:event_bonton7ActionPerformed
-
-    private void bonton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bonton8ActionPerformed
-        contraseña.setText(contraseña.getText() + "8");
-    }//GEN-LAST:event_bonton8ActionPerformed
-
-    private void bonton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bonton9ActionPerformed
-        contraseña.setText(contraseña.getText() + "9");
-    }//GEN-LAST:event_bonton9ActionPerformed
-
-    private void bonton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bonton10ActionPerformed
-        contraseña.setText(contraseña.getText() + "*");
-    }//GEN-LAST:event_bonton10ActionPerformed
-
-    private void bonton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bonton11ActionPerformed
-        contraseña.setText(contraseña.getText() + "0");
-    }//GEN-LAST:event_bonton11ActionPerformed
-
-    private void bonton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bonton12ActionPerformed
-        contraseña.setText(contraseña.getText() + "#");
-    }//GEN-LAST:event_bonton12ActionPerformed
-
     private void contraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraseñaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_contraseñaActionPerformed
-
-    private void prenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prenActionPerformed
+    private void add(String numero){
+        contraseña.setText(contraseña.getText()+numero);
+    }
+            
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_prenActionPerformed
+        add("1");
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+        add("2");
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        add("3");
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+        add("4");
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        // TODO add your handling code here:
+        add("5");
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        // TODO add your handling code here:
+        add("6");
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        // TODO add your handling code here:
+        add("7");
+    }//GEN-LAST:event_jButton8MouseClicked
+
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        // TODO add your handling code here:
+        add("8");
+    }//GEN-LAST:event_jButton9MouseClicked
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+        // TODO add your handling code here:
+        add("9");
+    }//GEN-LAST:event_jButton10MouseClicked
+
+    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
+        // TODO add your handling code here:
+        add("0");
+    }//GEN-LAST:event_jButton12MouseClicked
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+        // TODO add your handling code here:
+        contraseña.setText(null);
+    }//GEN-LAST:event_jButton11MouseClicked
+
+    private void jButton13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseClicked
+        // TODO add your handling code here:
+        
+        String contra=contraseña.getText();
+        if (contra.equals(listacontra[0])) {
+            (new caja1()).setVisible(true);
+            this.setVisible(false);
+        }else if (contra.equals(listacontra[1])){
+            (new caja2()).setVisible(true);
+            this.setVisible(false);
+        }else if (contra.equals(listacontra[2])){
+            (new caja3()).setVisible(true);
+            this.setVisible(false);
+        }else if (contra.equals("")){
+            JOptionPane.showMessageDialog(this, "No ingresó su PIN");
+            
+        }else{
+            JOptionPane.showMessageDialog(this, "PIN incorrecto");
+            if (a>1){
+                String respuesta=JOptionPane.showInputDialog(this, "Has agotado tus intentos\n"+
+                        "Responde la pregunta de seguridad\n ¿Cual es tu color favorito");
+                
+                if (respuesta.equals("azul")){
+                   a=1;
+                }else{
+                   JOptionPane.showMessageDialog(this, "Respuesta incorrecta");
+                   System.exit(0);
+                }
+            }
+            
+            a++;
+        }
+      
+        
+    }//GEN-LAST:event_jButton13MouseClicked
 
     /**
      * @param args the command line arguments
@@ -417,22 +463,31 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bonton1;
-    private javax.swing.JButton bonton10;
-    private javax.swing.JButton bonton11;
-    private javax.swing.JButton bonton12;
-    private javax.swing.JButton bonton2;
-    private javax.swing.JButton bonton3;
-    private javax.swing.JButton bonton4;
-    private javax.swing.JButton bonton5;
-    private javax.swing.JButton bonton6;
-    private javax.swing.JButton bonton7;
-    private javax.swing.JButton bonton8;
-    private javax.swing.JButton bonton9;
+    private javax.swing.JLabel bienLbl;
     private javax.swing.JPasswordField contraseña;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JPanel downPnl;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JToggleButton pren;
-    private javax.swing.JButton siguiente;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JPanel rootPnl;
+    private javax.swing.JPanel upPnl;
     // End of variables declaration//GEN-END:variables
 }
