@@ -396,13 +396,13 @@ public class Inicio extends javax.swing.JFrame {
         
         String contra=contraseña.getText();
         if (contra.equals(listacontra[0])) {
-            (new caja1()).setVisible(true);
+            (new caja4()).setVisible(true);
             this.setVisible(false);
         }else if (contra.equals(listacontra[1])){
-            (new caja2()).setVisible(true);
+            (new caja41()).setVisible(true);
             this.setVisible(false);
         }else if (contra.equals(listacontra[2])){
-            (new caja3()).setVisible(true);
+            (new caja411()).setVisible(true);
             this.setVisible(false);
         }else if (contra.equals("")){
             JOptionPane.showMessageDialog(this, "No ingresó su PIN");
@@ -438,7 +438,7 @@ public class Inicio extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

@@ -14,28 +14,26 @@ import java.text.DecimalFormat;
 import javax.swing.JButton;
 import javax.swing.plaf.ButtonUI;
 import javax.swing.plaf.basic.BasicButtonUI;
-import javax.swing.plaf.basic.BasicTableUI;
 
 /**
  *
  * @author User
  */
-public class caja4 extends javax.swing.JFrame {
+public class caja41 extends javax.swing.JFrame {
 
     /**
      * Creates new form caja4
      */
-    private double saldo =1600;
+    private double saldo =2000;
     DecimalFormat df =new DecimalFormat("###.##");
-    operacion ob1 = new operacion("DEPOSITO","1500","15 febrero 2021","8:00");
-    operacion ob2 = new operacion("RETIRO","300","15 febrero 2021","9:10");
-    operacion ob3 = new operacion("DEPOSITO","400","15 febrero 2021","14:00");
+    operacion ob1 = new operacion("DEPOSITO","2000","14 febrero 2021","8:00");
+    operacion ob2 = new operacion("RETIRO","300","20 marzo 2021","9:10");
+    operacion ob3 = new operacion("DEPOSITO","300","15 junio 2021","14:00");
     logica banco = new logica();
     
-    public caja4() {
+    public caja41() {
         initComponents();
         jTable1.getTableHeader().setOpaque(false);
-        jTable1.setUI(new BasicTableUI());
         jTable1.getTableHeader().setBackground(new Color (18,18,18));
         jTable1.getTableHeader().setForeground(new Color (255,255,254));
         banco.addRow(ob1);
@@ -205,7 +203,7 @@ public class caja4 extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(51, 255, 102));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("1600.00");
+        jLabel16.setText("2000.00");
         jPanel31.add(jLabel16, java.awt.BorderLayout.CENTER);
 
         jPanel5.add(jPanel31, java.awt.BorderLayout.PAGE_START);
@@ -1030,20 +1028,21 @@ public class caja4 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(caja4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(caja41.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(caja4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(caja41.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(caja4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(caja41.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(caja4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(caja41.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new caja4().setVisible(true);
+                new caja41().setVisible(true);
             }
         });
     }

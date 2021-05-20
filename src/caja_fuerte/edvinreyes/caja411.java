@@ -14,28 +14,26 @@ import java.text.DecimalFormat;
 import javax.swing.JButton;
 import javax.swing.plaf.ButtonUI;
 import javax.swing.plaf.basic.BasicButtonUI;
-import javax.swing.plaf.basic.BasicTableUI;
 
 /**
  *
  * @author User
  */
-public class caja4 extends javax.swing.JFrame {
+public class caja411 extends javax.swing.JFrame {
 
     /**
      * Creates new form caja4
      */
-    private double saldo =1600;
+    private double saldo =200;
     DecimalFormat df =new DecimalFormat("###.##");
-    operacion ob1 = new operacion("DEPOSITO","1500","15 febrero 2021","8:00");
+    operacion ob1 = new operacion("DEPOSITO","400","15 febrero 2021","8:00");
     operacion ob2 = new operacion("RETIRO","300","15 febrero 2021","9:10");
-    operacion ob3 = new operacion("DEPOSITO","400","15 febrero 2021","14:00");
+    operacion ob3 = new operacion("DEPOSITO","100","15 febrero 2021","14:00");
     logica banco = new logica();
     
-    public caja4() {
+    public caja411() {
         initComponents();
         jTable1.getTableHeader().setOpaque(false);
-        jTable1.setUI(new BasicTableUI());
         jTable1.getTableHeader().setBackground(new Color (18,18,18));
         jTable1.getTableHeader().setForeground(new Color (255,255,254));
         banco.addRow(ob1);
@@ -1030,20 +1028,21 @@ public class caja4 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(caja4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(caja411.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(caja4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(caja411.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(caja4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(caja411.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(caja4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(caja411.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new caja4().setVisible(true);
+                new caja411().setVisible(true);
             }
         });
     }
