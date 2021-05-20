@@ -993,10 +993,10 @@ public class caja41 extends javax.swing.JFrame {
 
     private void btnBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBMouseClicked
         // TODO add your handling code here:
-        banco.addRow(new operacion("DEPÓSITO",txtMonto2.getText(),txtDia2.getText()+" "+
+        banco.addRow(new operacion("RETIRO",txtMonto2.getText(),txtDia2.getText()+" "+
                 txtMes2.getText()+" 2021",txtHora2.getText()+":"+txtMinutos2.getText()));
         banco.crearTabla(jTable1);
-        double monto=Double.parseDouble(txtMonto1.getText());
+        double monto=Double.parseDouble(txtMonto2.getText());
         saldo=saldo-monto;
         jLabel16.setText(df.format(saldo));
     }//GEN-LAST:event_btnBMouseClicked
